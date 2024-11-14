@@ -1,11 +1,16 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdk 31
+    compileSdk 33
 
     defaultConfig {
         minSdk 21
-        targetSdk 31
+        targetSdk 33
+    }
+
+    buildFeatures {
+        renderScript true
+        aidl true
     }
 
     sourceSets {
@@ -22,6 +27,18 @@ android {
     lint {
         abortOnError false
     }
+}
+
+task cleanAndBuildAAR(type: GradleBuild) {
+    tasks = ['clean', 'assembleRelease']
+}
+
+task copyAAR(type: Copy) {
+    dependsOn 'cleanAndBuildAAR'
+    dependsOn 'bundleReleaseAar'
+    from 'build/outputs/aar/'
+    into '../../app/libs/'
+    include '*-release.aar'
 }
 
 dependencies {

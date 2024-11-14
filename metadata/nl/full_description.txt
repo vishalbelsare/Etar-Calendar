@@ -1,10 +1,11 @@
 Features:
 - Maandoverzicht.
 - Week, dag en agendalijst overzicht.
-- Gebruikt Androidkalendersynchronisatie. Werkt met Google Calendar, Exchange, etc.
+- Gebruikt Androidkalendersynchronisatie.
 - Material Design.
 - Donker en licht thema.
 - Gratis, open-source en absoluut geen advertenties.
+- Agenda-widget
 - Ondersteunt kalenders delen via ICS en kan im-/exporteren van/naar SD-kaart.
 - Meertalige gebruikersinterface.
 
